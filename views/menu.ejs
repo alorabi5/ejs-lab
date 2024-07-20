@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+  <h1>Full Menu</h1>
+
+  <table>
+    <% menu.forEach(item => { %>
+        <tr>
+            <th>Name</th>
+            <td><%= item.name %></td>
+        </tr>
+        <tr>
+            <th>Price</th>
+            <td><%= item.price %></td>
+        </tr>
+        <tr>
+            <th>Rating</th>
+            <td><%= item.rating %></td>
+        </tr>
+        <tr>
+            <th>Details</th>
+            <td><%= item.details %></td>
+        </tr>
+    <% }); %>
+  </table>
+</body>
+</html>
